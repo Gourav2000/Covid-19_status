@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Covid Tracker</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="static/css_Covid.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.0.1/normalize.css">
+        <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+        <style>
+            body{
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href={{url_for('home')}}>Home</a>
+          <a href={{url_for('news_sec')}}>News</a>
+          <a href={{url_for('guidelines_sec')}}>Guidelines</a>
+          <a href="#">About</a>
+    </div>
+
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+        <div id="retro">
+            <h1>Covid-19_Status</h1><h2>Please wear a mask and follow social distancing.</h2>
+        </div>
+        <div>
+            <img src="https://tse4.mm.bing.net/th?id=OIP.BkIzhAjWBVuMev4uUBBaSQHaDH&pid=Api&P=0&w=415&h=176" align="right">
+        </div>
+        <div class="body">
+            <h4>It is normal to be scared, distressed, or angry when you hear about a disease outbreak.<br> <i>Covid-19_Status</i> take you to the farthest corners of the world, and they bring the world to you, delivering content and services that enrich your lives, your families and your communities. We are available on more screens in more places than any other news source. We are committed to serving you. We are Covid-19_Status.</h4>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
+    <script src="static/javascript_Covid.js"></script>
+    </body>
+</html>
