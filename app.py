@@ -4,6 +4,9 @@ import itertools
 import flask
 from flask import Flask, render_template
 from flask import request, jsonify
+from GoogleNews import GoogleNews
+from datetime import datetime,timedelta
+import news
 #import matplotlib.pyplot as plt
 
 '''state_list=[
@@ -82,7 +85,7 @@ def home(India_list= India_list,World_list= World_list,i_total=i_total,w_total=w
 
 @app.route('/news', methods=['GET'])
 def news_sec():
-    return "<h1>Read the news nigga!!</h1>"
+    return jsonify(news.get_news())
 
 @app.route('/guidelines',methods=['GET'])
 def guidelines_sec():
