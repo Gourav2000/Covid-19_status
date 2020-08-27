@@ -7,6 +7,8 @@ from flask import request, jsonify
 from GoogleNews import GoogleNews
 from datetime import datetime,timedelta
 import news
+import analysis
+import numpy
 #import matplotlib.pyplot as plt
 
 '''state_list=[
@@ -94,6 +96,9 @@ def guidelines_sec():
 @app.route('/about', methods=['GET'])
 def about_sec():
     return render_template("About_covid.html")
+@app.route('/analysis', methods=['GET'])
+def analysis_sec(dataw=analysis.get_world_daily_data(),datai=analysis.get_india_daily_update(),datawd=analysis.get_world_derrivative(),dataid=analysis.get_india_derrivative()):
+    return render_template("Analysis.html",dataw=dataw,datai=datai,datawd=datawd,dataid=dataid,zip=zip)
 
 if __name__ == "__main__":
     app.run(debug=True)

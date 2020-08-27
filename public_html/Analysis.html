@@ -1,0 +1,142 @@
+<html>
+
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['line'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('date', 'Date');
+            data.addColumn('number', 'Cases');
+            data.addColumn('number', 'Deaths');
+            data.addColumn('number', 'Recovered');
+
+            {%for i,j,k in zip(dataw['cases'],dataw['deaths'],dataw['recovered'])%}
+            data.addRow([new Date({{i['year']}},{{i['month']-1}},{{i['day']}}),{{i['data']}},{{j['data']}},{{k['data']}}])
+            {%endfor%}
+                
+
+            var options = {
+                chart: {
+                    title: 'World covid graph',
+                    subtitle: 'in millions'
+                },
+                width: 900,
+                height: 500
+            };
+
+            var chart = new google.charts.Line(document.getElementById('world_chart'));
+
+            chart.draw(data, google.charts.Line.convertOptions(options));
+        }
+    </script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['line'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('date', 'Date');
+            data.addColumn('number', 'Cases');
+            data.addColumn('number', 'Deaths');
+            data.addColumn('number', 'Recovered');
+
+            {%for i,j,k in zip(datai['cases'],datai['deaths'],datai['recovered'])%}
+            data.addRow([new Date({{i['year']}},{{i['month']-1}},{{i['day']}}),{{i['data']}},{{j['data']}},{{k['data']}}])
+            {%endfor%}
+                
+
+            var options = {
+                chart: {
+                    title: 'India covid graph',
+                    subtitle: 'in millions'
+                },
+                width: 900,
+                height: 500
+            };
+
+            var chart = new google.charts.Line(document.getElementById('India_chart'));
+
+            chart.draw(data, google.charts.Line.convertOptions(options));
+        }
+    </script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['line'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('date', 'Date');
+            data.addColumn('number', 'Cases');
+            data.addColumn('number', 'Deaths');
+            data.addColumn('number', 'Recovered');
+
+            {%for i,j,k,l in zip(datawd['cases'],datawd['deaths'],datawd['recovered'],datawd['dates'])%}
+            data.addRow([new Date({{l['year']}},{{l['month']-1}},{{l['day']}}),{{i}},{{j}},{{k}}])
+            {%endfor%}
+                
+
+            var options = {
+                chart: {
+                    title: 'World covid derrivative graph',
+                    subtitle: 'in millions'
+                },
+                width: 900,
+                height: 500
+            };
+
+            var chart = new google.charts.Line(document.getElementById('World_derrivative_chart'));
+
+            chart.draw(data, google.charts.Line.convertOptions(options));
+        }
+    </script>
+</script>
+    <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['line'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('date', 'Date');
+            data.addColumn('number', 'Cases');
+            data.addColumn('number', 'Deaths');
+            data.addColumn('number', 'Recovered');
+
+            {%for i,j,k,l in zip(dataid['cases'],dataid['deaths'],dataid['recovered'],dataid['dates'])%}
+            data.addRow([new Date({{l['year']}},{{l['month']-1}},{{l['day']}}),{{i}},{{j}},{{k}}])
+            {%endfor%}
+                
+
+            var options = {
+                chart: {
+                    title: 'World covid derrivative graph',
+                    subtitle: 'in millions'
+                },
+                width: 900,
+                height: 500
+            };
+
+            var chart = new google.charts.Line(document.getElementById('India_derrivative_chart'));
+
+            chart.draw(data, google.charts.Line.convertOptions(options));
+        }
+    </script>
+</head>
+
+<body>
+    <div id="world_chart"></div>
+    <br><br>
+    <div id="India_chart"></div>
+    <br><br>
+    <div id="World_derrivative_chart"></div>
+    <br><br>
+    <div id="India_derrivative_chart"></div>
+</body>
+
+</html>
