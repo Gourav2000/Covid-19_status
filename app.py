@@ -87,11 +87,12 @@ def home(India_list= India_list,World_list= World_list,i_total=i_total,w_total=w
 
 @app.route('/news', methods=['GET'])
 def news_sec():
-    return jsonify(news.get_news())
+    return render_template("news.html", newsList= news.get_news())
+    # jsonify(news.get_news())
 
 @app.route('/guidelines',methods=['GET'])
 def guidelines_sec():
-    return "<h1>Its already 5 months at minimum and u still don't know guideline u dumb F***</h1>"
+    return render_template("guidelines.html")
 
 @app.route('/about', methods=['GET'])
 def about_sec():
