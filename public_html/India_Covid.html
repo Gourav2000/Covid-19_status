@@ -7,6 +7,7 @@ and open the template in the editor.
 <html>
 
 <head>
+
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
         google.charts.load('current', { 'packages': ['corechart'] });
@@ -26,12 +27,12 @@ and open the template in the editor.
                 color: 'white',
                 fontSize: 25
             },
-            'chartArea': {'width': '100%', 'height': '80%'},
+            'chartArea': { 'width': '100%', 'height': '80%' },
             legend: {
                 textStyle: { color: 'white' },
             },
             backgroundColor: 'transparent',
-            title: 'All India chart',
+
             height: 600,
             width: 700
         };
@@ -59,12 +60,12 @@ and open the template in the editor.
                 color: 'white',
                 fontSize: 25
             },
-            'chartArea': {'width': '100%', 'height': '80%'},
+            'chartArea': { 'width': '100%', 'height': '80%' },
             legend: {
                 textStyle: { color: 'white' },
             },
             backgroundColor: 'transparent',
-            title: 'Whole world chart',
+
             height: 600,
             width: 700
         };
@@ -82,10 +83,36 @@ and open the template in the editor.
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.0.1/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
     <style>
         body {
             font-family: 'Aclonica';
             font-size: 16px;
+        }
+        #mySidenav{
+            font-family: initial;
+            font-size: initial;
+        }
+        #text_shadow {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-shadow: 4px 3px 0px rgb(0, 0, 0), 9px 8px 0px rgba(253, 252, 252, 0.671);
+        }
+
+        .pie{
+            width: 30rem;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 900px) {
+            .updates {
+                flex-direction: column;
+            }
+
+            .tabbed {
+                margin-top: 30px;
+            }
+            
         }
     </style>
 </head>
@@ -93,10 +120,24 @@ and open the template in the editor.
 <body>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Home</a>
-        <a href={{url_for('news_sec')}}>News</a>
-        <a href={{url_for('guidelines_sec')}}>Guidelines</a>
-        <a href={{url_for('about_sec')}}>About</a>
+        <a href="#">Home
+        </a>
+        <hr>
+        <a href={{url_for('analysis_sec')}}>Analysis
+        </a>
+        <hr>
+        <a href={{url_for('news_sec')}}>News
+        </a>
+        <hr>
+        <a href={{url_for('guidelines_sec')}}>Guidelines
+        </a>
+        <hr>
+        <a href={{url_for('api_sec')}}>API
+        </a>
+        <hr>
+        <a href={{url_for('about_sec')}}>About
+        </a>
+        <hr>
     </div>
 
     <div id="main">
@@ -112,56 +153,90 @@ and open the template in the editor.
                 <div class='console-container'><span id='text'></span>
                     <div class='console-underscore' id='console'>&#95;</div>
                 </div>
-                <div align="center" id="piechart2"></div>
-
-                <div class="updates">
-
-                    <h2 style="color: #2C8ABC">Total Confirmed<br><br>{{w_total['cases']}}</h2>
-                    <h2 style="color: #CE0505">Total Deaths<br><br>{{w_total['deaths']}}</h2>
-                    <h2 style="color: #009688">Total Recovered<br><br>{{w_total['recovered']}}</h2>
-                </div>
+                <div id="piechart2" class="pie"></div>
+                <center>
+                    <div class="updates"
+                        style="display: flex; justify-content: center; padding-bottom: 50px; margin-top: -20px;">
+                        <div style="border: 1px solid white">
+                            <h1 style="color: #3366CC; padding: 10px 15px;">Total Confirmed<br><br>{{w_total['cases']}}
+                            </h1>
+                        </div>
+                        <div style="border: 1px solid white">
+                            <h1 style="color: #DC3912; padding: 10px 15px;">Total Deaths<br><br>{{w_total['deaths']}}
+                            </h1>
+                        </div>
+                        <div style="border: 1px solid white">
+                            <h1 style="color: #FF9900; padding: 10px 15px;">Total
+                                Recovered<br><br>{{w_total['recovered']}}</h1>
+                        </div>
+                    </div>
+                </center>
                 <table>
                     <tr>
                         <th>Country</th>
-                        <th style="color: #2C8ABC">Confirmed</th>
-                        <th style="color: #CE0505">Deaths</th>
-                        <th style="color: #009688">Recovered</th>
+                        <th style="color: #3366CC">Confirmed</th>
+                        <th style="color: #DC3912">Deaths</th>
+                        <th style="color: #FF9900">Recovered</th>
                     </tr>
                     {%for i in wlist%}
                     <tr>
                         <td>{{i['country']}}</td>
-                        <td>{{i['cases']}}</td>
-                        <td>{{i['deaths']}}</td>
-                        <td>{{i['recovered']}}</td>
+                        <td>{{i['cases']}}
+                            <p style="color:#3366CC ;">↑ {{i['todayCases']}}</p>
+                        </td>
+                        <td>{{i['deaths']}}
+                            <p style="color:#DC3912 ;">↑ {{i['todayDeaths']}}</p>
+                        </td>
+                        <td>{{i['recovered']}}
+                            <p style="color:#FF9900 ;">↑ {{i['todayRecovered']}}</p>
+                        </td>
                     </tr>
                     {%endfor%}
                 </table>
             </div>
             <div>
-                <h2 align="center">India Updates</h2>
-                <div align="center" id="piechart">
+                <h1 align="center" id="text_shadow">India Updates</h1>
+                <div id="piechart" class="pie">
                 </div>
+                <center>
+                    <div class="updates"
+                        style="display: flex; justify-content: center; padding-bottom: 50px; margin-top: -20px;">
 
-                <div class="updates">
-
-                    <h2 style="color: #2C8ABC">Total Confirmed<br><br>{{i_total['cases']}}</h2>
-                    <h2 style="color: #CE0505">Total Deaths<br><br>{{i_total['deaths']}}</h2>
-                    <h2 style="color: #009688">Total Recovered<br><br>{{i_total['recovered']}}</h2>
-                </div>
+                        <div style="border: 1px solid white">
+                            <h1 style="color: #3366CC; padding: 10px 15px;">Total Confirmed<br><br>{{i_total['cases']}}
+                            </h1>
+                        </div>
+                        <div style="border: 1px solid white">
+                            <h1 style="color: #DC3912; padding: 10px 15px;">Total Deaths<br><br>{{i_total['deaths']}}
+                            </h1>
+                        </div>
+                        <div style="border: 1px solid white">
+                            <h1 style="color: #FF9900; padding: 10px 15px;">Total
+                                Recovered<br><br>{{i_total['recovered']}}</h1>
+                        </div>
+                    </div>
+                </center>
                 <table>
                     <tr>
                         <th>State</th>
-                        <th style="color: #2C8ABC">Confirmed</th>
-                        <th style="color: #CE0505">Deaths</th>
-                        <th style="color: #009688">Recovered</th>
+                        <th style="color: #3366CC">Confirmed</th>
+                        <th style="color: #DC3912">Deaths</th>
+                        <th style="color: #FF9900">Recovered</th>
                     </tr>
                     {%for i in ilist%}
                     {%if i['state']!='Total'%}
                     <tr>
                         <td>{{i['state']}}</td>
-                        <td>{{i['confirmed']}}</td>
-                        <td>{{i['deaths']}}</td>
-                        <td>{{i['recovered']}}</td>
+                        <td>{{i['confirmed']}}
+                            <p style="color:#3366CC ;">↑ {{i['deltaconfirmed']}}</p>
+                        </td>
+                        <td>{{i['deaths']}}
+                            <p style="color:#DC3912 ;">↑ {{i['deltadeaths']}}</p>
+                        </td>
+                        <td>{{i['recovered']}}
+                            <p style="color:#FF9900 ;">↑ {{i['deltarecovered']}}</p>
+                        </td>
+
                     </tr>
                     {%endif%}
                     {%endfor%}
@@ -169,6 +244,7 @@ and open the template in the editor.
             </div>
         </div>
     </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
     <script src="static/javascript_Covid.js"></script>
 </body>

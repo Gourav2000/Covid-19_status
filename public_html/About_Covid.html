@@ -4,42 +4,226 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+
 <html>
-    <head>
-        <title>Covid Tracker</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="static/css_Covid.css">
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.0.1/normalize.css">
-        <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+
+<head>
+    <title>Covid Tracker</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css_Covid.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.0.1/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <div class="wrapper">
         <style>
-            body{
+
+            .header>img {
+                width: 100%;
+                height: 25rem;
+            }
+
+            .content {
+                padding-right: 15rem;
+                padding-left: 15rem;
+            }
+
+            .profile {
+                color: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+
+            }
+
+            .profile_des {
+                background-color: lightgrey;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                text-align: center;
+                width: 25rem;
+                margin: 20px 50px;
+                border-radius: 5%;
                 padding: 5px;
             }
-        </style>
-    </head>
-    <body>
-        <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href={{url_for('home')}}>Home</a>
-          <a href={{url_for('news_sec')}}>News</a>
-          <a href={{url_for('guidelines_sec')}}>Guidelines</a>
-          <a href="#">About</a>
-    </div>
 
+            .profile_des>img {
+                padding: 20px 0px;
+                display: inline-block;
+                width: 250px;
+                height: auto;
+                border-radius: 100%;
+                position: relative;
+
+            }
+
+            .wrapper i {
+                padding: 8px;
+                text-shadow: 0px 6px 8px rgba(0, 0, 0, 0.6);
+                transition: all ease-in-out 150ms;
+            }
+
+            .wrapper>a:nth-child(1) {
+                color: #0077B5;
+            }
+
+            .wrapper>a:nth-child(2) {
+                color: #dd4b39;
+            }
+
+            .wrapper>a:nth-child(3) {
+                color: #000000;
+            }
+
+            .wrapper>a:nth-child(4) {
+                color: #1DA1F2;
+            }
+
+            .wrapper i:hover {
+                margin-top: -3px;
+                text-shadow: 0px 14px 10px rgba(0, 0, 0, 0.4);
+            }
+
+            .link {
+                background-color: lightgrey;
+                color: black;
+                width: 25rem;
+                border-radius: 5px;
+                padding: 10px;
+                margin: 0 auto;
+            }
+
+            @media(max-width: 720px) {
+                .profile {
+                    flex-direction: column;
+                }
+
+                .profile_des {
+                    width: 80%;
+                    margin-top: 30px;
+                }
+
+                .content {
+                    padding: 0px;
+                }
+            }
+        </style>
+</head>
+
+<body>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href={{url_for('home')}}>Home
+        </a>
+        <hr>
+        <a href={{url_for('analysis_sec')}}>Analysis
+        </a>
+        <hr>
+        <a href={{url_for('news_sec')}}>News
+        </a>
+        <hr>
+        <a href={{url_for('guidelines_sec')}}>Guidelines
+        </a>
+        <hr>
+        <a href={{url_for('api_sec')}}>API
+        </a>
+        <hr>
+        <a href={{url_for('about_sec')}}>About
+        </a>
+        <hr>
+    </div>
     <div id="main">
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
     </div>
-        <div id="retro">
-            <h1>Covid-19_Status</h1><h2>Please wear a mask and follow social distancing.</h2>
+    <div class="header">
+        <img src="https://cdn.searchenginejournal.com/wp-content/uploads/2019/01/Top-10-Ranking-About-Us-Pages.png">
+    </div>
+    <div class="content" align="center">
+        <br>
+        <h1>- About -</h1>
+        <p>This website tracks the latest news development about the COVID-19, alongside collecting data for further
+            analysis.</p>
+        <br>
+        
+        <p>It is normal to be scared, distressed, or angry when you hear about a disease outbreak.<i>Covid-19_Status</i>
+            take you to the farthest corners of the world, and bring the world to you, delivering content and services
+            that enrich
+            your lives, your families and your communities. We are available on more screens in more places than any
+            other source.
+            We are committed to serving you. We are <i>Covid-19_Status.</i><br>It acts as a portal for the public to
+            keep track of the latest news
+            development about the COVID-19, alongside collecting data for further analysis. All the contents are
+            handpicked, filtered, and
+            curated by us to our best extent to ensure that sources are reliable with minimal hoaxes and fake news, in
+            the best benefit of the public.</p>
+        <br><br>
+        <h1>- Creators -</h1><br>
+    </div>
+    <div class="profile">
+        <div class="profile_des">
+            <img src="https://avatars3.githubusercontent.com/u/66518355?s=460&u=0d810dc2004aa812559457d1fdf3100ebab8545a&v=4"
+                height="50px" width="25px">
+            <div class="container">
+                <h1>Nivedita Singh</h1>
+                <div class="wrapper">
+                    <a href="https://www.linkedin.com/in/nivedita-singh-195b6818a/" target="blank"><i
+                            class="fa fa-3x fa-linkedin-square"></i></a>
+                    <a href="mailto: nivedita19390@gmail.com"><i class="fa fa-3x fa-google-plus"></i></a>
+                    <a href="https://github.com/Nivedita967" target="blank"><i
+                            class="fa fa-3x fa-github-square"></i></a>
+                    <a href="https://twitter.com/Nivedit95025806" target="blank"><i
+                            class="fa fa-3x fa-twitter-square"></i></a>
+                </div>
+
+            </div>
         </div>
-        <div>
-            <img src="https://tse4.mm.bing.net/th?id=OIP.BkIzhAjWBVuMev4uUBBaSQHaDH&pid=Api&P=0&w=415&h=176" align="right">
+        <div class="profile_des">
+            <img src="https://avatars2.githubusercontent.com/u/56431415?s=400&u=9eed1328401462e0b3ecabcb3fe102f945f2ad65&v=4"
+                height="50px" width="25px">
+            <h1>Gourav Sarkar</h1>
+            <div class="wrapper">
+                <a href="https://www.linkedin.com/in/gourav-sarkar-439026191/" target="blank"><i
+                        class="fa fa-3x fa-linkedin-square"></i></a>
+                <a href="mailto: gouravsarkar67@gmail.com"><i class="fa fa-3x fa-google-plus"></i></a>
+                <a href="https://github.com/Gourav2000" target="blank"><i class="fa fa-3x fa-github-square"></i></a>
+                <a href="https://twitter.com/GouravS52630387" target="blank"><i
+                        class="fa fa-3x fa-twitter-square"></i></a>
+            </div>
         </div>
-        <div class="body">
-            <h4>It is normal to be scared, distressed, or angry when you hear about a disease outbreak.<br> <i>Covid-19_Status</i> take you to the farthest corners of the world, and they bring the world to you, delivering content and services that enrich your lives, your families and your communities. We are available on more screens in more places than any other news source. We are committed to serving you. We are Covid-19_Status.</h4>
+    </div>
+    <div class="footer">
+        <br>
+        <h2 style=" text-align: center; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">
+            Whole Project is Made Open Source.<br>
+            Feel Free To Contribute</h2>
+        <div class="link">
+            <input type="text" value="https://github.com/Gourav2000/Covid-19_status" id="copyMe" size="40" readonly />
+            <button onclick="copyMeOnClipboard()"><i class="fa fa-clipboard" style="margin: -10px;"></i></button>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
+        <p class="text-green-700"></p>
+    </div>
+    <br>
+    <br>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
     <script src="static/javascript_Covid.js"></script>
-    </body>
+    <script>
+        const copyText = document.querySelector("#copyMe")
+        const showText = document.querySelector("p")
+
+        const copyMeOnClipboard = () => {
+            copyText.select()
+            copyText.setSelectionRange(0, 99999) // used for mobile phone
+            document.execCommand("copy")
+            showText.innerHTML = `${copyText.value} is copied`
+            setTimeout(() => {
+                showText.innerHTML = ""
+            }, 1000)
+        }
+    </script>
+
+</body>
+
 </html>

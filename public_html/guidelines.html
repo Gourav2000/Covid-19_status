@@ -1,0 +1,203 @@
+<html>
+
+<head>
+    <title>Latest News</title>
+    <link rel="stylesheet" href="static/css_Covid.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.0.1/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <style>
+        body {
+            padding: 5px;
+        }
+
+
+        #image {
+            float: right;
+            padding-top: 100px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        h1 {
+            font-family: Palatino Linotype;
+            color: gray;
+        }
+
+        @media(max-width: 720px) {
+            #body {
+                display: block;
+            }
+
+            #body #image {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href={{url_for('home')}}>Home
+        </a>
+        <hr>
+        <a href={{url_for('analysis_sec')}}>Analysis
+        </a>
+        <hr>
+        <a href={{url_for('news_sec')}}>News
+        </a>
+        <hr>
+        <a href={{url_for('guidelines_sec')}}>Guidelines
+        </a>
+        <hr>
+        <a href={{url_for('api_sec')}}>API
+        </a>
+        <hr>
+        <a href={{url_for('about_sec')}}>About
+        </a>
+        <hr>
+    </div>
+
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    </div>
+    <div id="body">
+        <div id="image">
+            <img src="https://images.medicinenet.com/images/article/main_image/covid-19-prevention.jpg">
+        </div>
+        <div>
+            <h1>What is COVID-19 (2019 novel coronavirus)?</h1>
+            <p>COVID-19 is a new disease first discovered in Wuhan, China, in late December 2019, that likely came from
+                infected animals and spread to humans. SARS-CoV-2 is the name of the novel coronavirus that causes
+                COVID-19.
+                The virus can cause severe respiratory problems mainly in people with medical problems, weakened
+                immunity,
+                and the elderly (age 60 and older). As of Mar. 11, 2020, the World Health Organization (WHO) declared
+                COVID-9 the cause of a worldwide pandemic. Some infections result in fatal viral pneumonia. The current
+                mortality rate (death rate) is about 4.76%, depending on the data available.</p>
+            <h1>What can people do to prevent a COVID-19 (2019 novel coronavirus) infection?</h1>
+            <ul>
+                <li>
+                    <h1>Wash your hands frequently and carefully</h1>
+                    <p>Use warm water and soap and rub your hands for at least 20 seconds. Work the lather to your
+                        wrists,
+                        between your fingers, and under your fingernails. You can also use an antibacterial and
+                        antiviral
+                        soap.
+
+                        Use hand sanitizer when you cannot wash your hands properly. Rewash your hands several times a
+                        day,
+                        especially after touching anything, including your phone or laptop.</p>
+                </li>
+                <li>
+                    <h1> Avoid touching your face</h1>
+                    <p>SARS-CoV-2 can live on some surfaces for up to 72 hours. You can get the virus on your hands if
+                        you
+                        touch a surface like:</p>
+                    <ul>
+                        <li>gas pump handle</li>
+                        <li>your cell phone</li>
+                        <li>a doorknob</li>
+                    </ul>
+                    <p>Avoid touching any part of your face or head, including your mouth, nose, and eyes. Also avoid
+                        biting
+                        your fingernails. This can give SARS-CoV-2 a chance to go from your hands into your body.</p>
+                </li>
+                <li>
+                    <h1>Stop shaking hands and hugging people</h1>
+                    <p>Similarly, avoid touching other people. Skin-to-skin contact can transmit SARS-CoV-2 from one
+                        person
+                        to another.</p>
+                </li>
+                <li>
+                    <h1>Don’t share personal items</h1>
+                    <p>Do not share personal items like:</p>
+                    <ul>
+                        <li>phones</li>
+                        <li>makeup</li>
+                        <li>combs</li>
+                    </ul>
+                    <p>
+                        It’s also important not to share eating utensils and straws. Teach children to recognize their
+                        reusable cup, straw, and other dishes for their own use only.</p>
+                </li>
+                <li>
+                    <h1>Cover your mouth and nose when you cough and sneeze</h1>
+                    <p>SARS-CoV-2 is found in high amounts in the nose and mouth. This means it can be carried by air
+                        droplets to other people when you cough, sneeze, or talk. It can also land on hard surfaces and
+                        stay
+                        there for up to 3 days.
+
+                        Use a tissue or sneeze into your elbow to keep your hands as clean as possible. Wash your hands
+                        carefully after you sneeze or cough, regardless.</p>
+                </li>
+                <li>
+                    <h1>Wash fresh groceries</h1>
+                    <p>Wash all produce under running water before eating or preparing.
+
+                        The CDCTrusted Source and the FDATrusted Source do not recommend using soap, detergent, or
+                        commercial produce wash on things like fruits and vegetables. Be sure to wash hands before and
+                        after
+                        handling these items.</p>
+                </li>
+                <li>
+                    <h1>Avoid eating or drinking in public places</h1>
+                    <p>Now is not the time to go out to eat. This means avoiding restaurants, coffee shops, bars, and
+                        other
+                        eateries.
+
+                        The virus can be transmitted through food, utensils, dishes, and cups. It may also be
+                        temporarily
+                        airborne from other people in the venue.
+
+                        You can still get delivery or takeaway food. Choose foods that are thoroughly cooked and can be
+                        reheated.
+
+                        High heat (at least 132°F/56°C, according to one recent, not-yet-peer-reviewed lab study) helps
+                        to
+                        kill coronaviruses.
+
+                        This means it may be best to avoid cold foods from restaurants and all food from buffets and
+                        open
+                        salad bars.</p>
+                </li>
+                <li>
+                    <h1>Do not gather in groups</h1>
+                    <p>Being in a group or gathering makes it more likely that you’ll be in close contact with someone.
+
+                        This includes avoiding all religious places of worship, as you may have to sit or stand too
+                        close to
+                        another congregant. It also includes not congregating at parks or beaches.</p>
+                </li>
+                <li>
+                    <h1>Take physical (social) distancing seriously</h1>
+                    <p>If you’re carrying the SARS-CoV-2 virus, it’ll be found in high amounts in your spit (sputum).
+                        This
+                        can happen even if you don’t have symptoms.
+
+                        Physical (social) distancing, also means staying home and working remotely when possible.
+
+                        If you must go out for necessities, keep a distance of 6 feet (2 m) from other people. You can
+                        transmit the virus by speaking to someone in close contact to you.</p>
+                </li>
+                <li>
+                    <h1>Self-quarantine if sick</h1>
+                    <p>Call your doctor if you have any symptoms. Stay home until you recover. Avoid sitting, sleeping,
+                        or
+                        eating with your loved ones even if you live in the same home.
+
+                        Wear a mask and wash your hands as much as possible. If you need urgent medical care, wear a
+                        mask
+                        and let them know you may have COVID-19.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
+    <script src="static/javascript_Covid.js"></script>
+</body>
+
+</html>
