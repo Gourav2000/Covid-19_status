@@ -22,10 +22,20 @@
             var options = {
                 chart: {
                     title: 'World covid graph',
-                    subtitle: 'in millions'
+                    subtitle: 'in millions',
                 },
+                titleTextStyle:{color:'white',bold:true},
+                'chartArea': {backgroundColor:'#000000'},
                 width: 900,
-                height: 500
+                height: 500,
+                backgroundColor: '#000000',
+                hAxis: {
+                textStyle:{color: 'white'},
+                },
+                vAxis:{
+                textStyle:{color:'white'},
+                gridlines:{color:'white'},
+                }
             };
 
             var chart = new google.charts.Line(document.getElementById('world_chart'));
@@ -51,13 +61,23 @@
                 
 
             var options = {
-                chart: {
-                    title: 'India covid graph',
-                    subtitle: 'in millions'
-                },
-                width: 900,
-                height: 500
-            };
+            chart: {
+                title: 'India covid graph',
+                subtitle: 'in millions',
+            },
+            titleTextStyle: { color: 'white', bold: true },
+            'chartArea': { backgroundColor: '#000000' },
+            width: 900,
+            height: 500,
+            backgroundColor: '#000000',
+            hAxis: {
+                textStyle: { color: 'white' },
+            },
+            vAxis: {
+                textStyle: { color: 'white' },
+                gridlines: { color: 'white' },
+            }
+        };
 
             var chart = new google.charts.Line(document.getElementById('India_chart'));
 
@@ -82,13 +102,23 @@
                 
 
             var options = {
-                chart: {
-                    title: 'World covid derrivative graph',
-                    subtitle: 'in millions'
-                },
-                width: 900,
-                height: 500
-            };
+            chart: {
+                title: 'World covid Cases per day',
+                subtitle: 'in thousands',
+            },
+            titleTextStyle: { color: 'white', bold: true },
+            'chartArea': { backgroundColor: '#000000' },
+            width: 900,
+            height: 500,
+            backgroundColor: '#000000',
+            hAxis: {
+                textStyle: { color: 'white' },
+            },
+            vAxis: {
+                textStyle: { color: 'white' },
+                gridlines: { color: 'white' },
+            }
+        };
 
             var chart = new google.charts.Line(document.getElementById('World_derrivative_chart'));
 
@@ -114,13 +144,23 @@
                 
 
             var options = {
-                chart: {
-                    title: 'World covid derrivative graph',
-                    subtitle: 'in millions'
-                },
-                width: 900,
-                height: 500
-            };
+            chart: {
+                title: 'India covid cases per day',
+                subtitle: 'in thousands',
+            },
+            titleTextStyle: { color: 'white', bold: true },
+            'chartArea': { backgroundColor: '#000000' },
+            width: 900,
+            height: 500,
+            backgroundColor: '#000000',
+            hAxis: {
+                textStyle: { color: 'white' },
+            },
+            vAxis: {
+                textStyle: { color: 'white' },
+                gridlines: { color: 'white' },
+            }
+        };
 
             var chart = new google.charts.Line(document.getElementById('India_derrivative_chart'));
 
@@ -130,21 +170,31 @@
     <link rel="stylesheet" href="static/css_Covid.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.0.1/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+
 </head>
 
 <body>
     <div id="mySidenav" class="sidenav">
-            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-            <a href={{url_for('home')}}>Home
-                <hr></a>
-            <a href={{url_for('analysis_sec')}}>Analysis
-                <hr></a>
-            <a href={{url_for('news_sec')}}>News
-                <hr></a>
-            <a href={{url_for('guidelines_sec')}}>Guidelines
-                <hr></a>
-            <a href={{url_for('about_sec')}}>About
-                <hr></a>
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href={{url_for('home')}}>Home
+        </a>
+        <hr>
+        <a href={{url_for('analysis_sec')}}>Analysis
+        </a>
+        <hr>
+        <a href={{url_for('news_sec')}}>News
+        </a>
+        <hr>
+        <a href={{url_for('guidelines_sec')}}>Guidelines
+        </a>
+        <hr>
+        <a href={{url_for('api_sec')}}>API
+        </a>
+        <hr>
+        <a href={{url_for('about_sec')}}>About
+        </a>
+        <hr>
     </div>
     <div id="main">
         <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; <b>Covid-19_Status</b></span>
@@ -155,21 +205,36 @@
         <input type="radio" name="tabs" id="tab-nav-2">
         <label for="tab-nav-2">India</label>
         <div class="tabs">
-            <div>
+            <div align="center">
+                <br><br>
                 <div id="world_chart"></div>
-                <br><br>
+                <div>
+                    <p>This is the world chart. Write your code here.</p>
+                </div>
+                <br><br><br>
                 <div id="World_derrivative_chart"></div>
-                <br><br>
+                <div>
+                    <p>This is world derrivative chart. Write your code here.</p>
+                </div>
+                <br>
             </div>
-            <div>
-                <div id="India_chart"></div>
+            <div align="center">
                 <br><br>
+                <div id="India_chart"></div>
+                <div>
+                    <p>This is the India chart. Write your code here.</p>
+                </div>
+                <br><br><br>
                 <div id="India_derrivative_chart"></div>
+                <div>
+                    <p>This is India derrivative chart. Write your code here.</p>
+                </div>
+                <br>
             </div>
         </div>
     </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
-        <script src="static/javascript_Covid.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
+    <script src="static/javascript_Covid.js"></script>
 </body>
 
 </html>

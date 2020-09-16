@@ -1,11 +1,70 @@
 <html>
-    <head>
-        <title></title>
-    </head>
-    <body>
-        {%for i in newsList%}
-            {{i}}
-            <br>
-        {%endfor%}
-    </body>
+
+<head>
+    <title>Latest News</title>
+    <link rel="stylesheet" href="static/css_Covid.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.0.1/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+        }
+
+        #news {
+            background-color: darkslategrey;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 10px;
+        }
+
+        #news>p>a:link {
+            color: lightblue;
+        }
+
+        #news>p>a:visited {
+            color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href={{url_for('home')}}>Home
+        </a>
+        <hr>
+        <a href={{url_for('analysis_sec')}}>Analysis
+        </a>
+        <hr>
+        <a href={{url_for('news_sec')}}>News
+        </a>
+        <hr>
+        <a href={{url_for('guidelines_sec')}}>Guidelines
+        </a>
+        <hr>
+        <a href={{url_for('api_sec')}}>API
+        </a>
+        <hr>
+        <a href={{url_for('about_sec')}}>About
+        </a>
+        <hr>
+    </div>
+
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; <b>Covid-19 News</b></span>
+    </div>
+    {%for i in newsList%}
+    <div id="news" class="shadow">
+        <h1>{{i['title']}}</h1>
+        <h5>by {{i['source']}}/ {{i['date&time']}}</h5>
+        <p>{{i['desc']}}</p>
+        <p><a href="{{i['link']}}">read more </a></p>
+    </div>
+    {%endfor%}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
+    <script src="static/javascript_Covid.js"></script>
+</body>
+
 </html>

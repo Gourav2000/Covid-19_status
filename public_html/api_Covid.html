@@ -1,0 +1,139 @@
+<html>
+
+<head>
+    <title>Get Api</title>
+    <link rel="stylesheet" href="static/css_Covid.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.0.1/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body {
+            padding: 30px;
+        }
+
+        #main {
+            padding: 0px;
+        }
+
+        input,
+        button {
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        input {
+            width: 95%;
+        }
+
+        @media (max-width: 720px) {
+            input {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href={{url_for('home')}}>Home
+        </a>
+        <hr>
+        <a href={{url_for('analysis_sec')}}>Analysis
+        </a>
+        <hr>
+        <a href={{url_for('news_sec')}}>News
+        </a>
+        <hr>
+        <a href={{url_for('guidelines_sec')}}>Guidelines
+        </a>
+        <hr>
+        <a href={{url_for('api_sec')}}>API
+        </a>
+        <hr>
+        <a href={{url_for('about_sec')}}>About
+        </a>
+        <hr>
+    </div>
+
+    <div id="main">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; <b>Covid-19_Status</b></span>
+    </div>
+    <br>
+    <h2 style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ">
+        You can also use our collected data with the help of following api calls:
+    </h2><br>
+    <h2
+        style="color:#009688; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        GET Default</h2>
+    <div class="link">
+        <input type="text" value="https://dummmmmmmmmmy/" id="copyMe1" size="140" readonly />
+        <button onclick="copyMeOnClipboard1()"><i class="fa fa-clipboard" style="padding: 3px;"></i></button>
+    </div>
+    <p id="p1" style="color:#009688;"></p>
+    <br>
+    <h2
+        style="color:#009688; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        GET Default</h2>
+    <div class="link">
+        <input type="text" value="https://dummmmmmmmmmy/" id="copyMe2" size="140" readonly />
+        <button onclick="copyMeOnClipboard2()"><i class="fa fa-clipboard" style="padding: 3px;"></i></button>
+    </div>
+    <p id="p2" style="color:#009688;"></p>
+    <br>
+    <h2
+        style="color:#009688; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+        GET Default</h2>
+    <div class="link">
+        <input type="text" value="https://dummmmmmmmmmy/" id="copyMe3" size="140" readonly />
+        <button onclick="copyMeOnClipboard3()"><i class="fa fa-clipboard" style="padding: 3px;"></i></button>
+    </div>
+    <p id="p3" style="color:#009688;"></p>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
+    <script src="static/javascript_Covid.js"></script>
+    <script>
+
+
+        const copyMeOnClipboard1 = () => {
+            const copyText = document.querySelector("#copyMe1")
+            const showText = document.querySelector("#p1")
+            copyText.select()
+            copyText.setSelectionRange(0, 99999) // used for mobile phone
+            document.execCommand("copy")
+            showText.innerHTML = `${copyText.value} is copied`
+            setTimeout(() => {
+                showText.innerHTML = ""
+            }, 1000)
+        }
+
+
+
+        const copyMeOnClipboard2 = () => {
+            const copyText = document.querySelector("#copyMe2")
+            const showText = document.querySelector("#p2")
+            copyText.select()
+            copyText.setSelectionRange(0, 99999) // used for mobile phone
+            document.execCommand("copy")
+            showText.innerHTML = `${copyText.value} is copied`
+            setTimeout(() => {
+                showText.innerHTML = ""
+            }, 1000)
+        }
+
+
+        const copyMeOnClipboard3 = () => {
+            const copyText = document.querySelector("#copyMe3")
+            const showText = document.querySelector("#p3")
+            copyText.select()
+            copyText.setSelectionRange(0, 99999) // used for mobile phone
+            document.execCommand("copy")
+            showText.innerHTML = `${copyText.value} is copied`
+            setTimeout(() => {
+                showText.innerHTML = ""
+            }, 1000)
+        }
+    </script>
+</body>
+
+</html>

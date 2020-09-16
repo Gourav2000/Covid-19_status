@@ -83,10 +83,36 @@ and open the template in the editor.
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.0.1/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-responsive.css">
     <style>
         body {
             font-family: 'Aclonica';
             font-size: 16px;
+        }
+        #mySidenav{
+            font-family: initial;
+            font-size: initial;
+        }
+        #text_shadow {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-shadow: 4px 3px 0px rgb(0, 0, 0), 9px 8px 0px rgba(253, 252, 252, 0.671);
+        }
+
+        .pie{
+            width: 30rem;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 900px) {
+            .updates {
+                flex-direction: column;
+            }
+
+            .tabbed {
+                margin-top: 30px;
+            }
+            
         }
     </style>
 </head>
@@ -95,15 +121,23 @@ and open the template in the editor.
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="#">Home
-            <hr></a>
+        </a>
+        <hr>
         <a href={{url_for('analysis_sec')}}>Analysis
-            <hr></a>
+        </a>
+        <hr>
         <a href={{url_for('news_sec')}}>News
-            <hr></a>
+        </a>
+        <hr>
         <a href={{url_for('guidelines_sec')}}>Guidelines
-            <hr></a>
+        </a>
+        <hr>
+        <a href={{url_for('api_sec')}}>API
+        </a>
+        <hr>
         <a href={{url_for('about_sec')}}>About
-            <hr></a>
+        </a>
+        <hr>
     </div>
 
     <div id="main">
@@ -119,14 +153,24 @@ and open the template in the editor.
                 <div class='console-container'><span id='text'></span>
                     <div class='console-underscore' id='console'>&#95;</div>
                 </div>
-                <div align="center" id="piechart2" style="padding-left: 10rem;"></div>
-
-                <div class="updates" style="display: flex; padding-bottom: 50px; margin-top: -20px;">
-                    <div style="border: 1px solid white"><h1 style="color: #3366CC; padding: 10px 15px;">Total Confirmed<br><br>{{w_total['cases']}}</h1></div>
-                    <div style="border: 1px solid white"><h1 style="color: #DC3912; padding: 10px 15px;">Total Deaths<br><br>{{w_total['deaths']}}</h1></div>
-                    <div style="border: 1px solid white"><h1 style="color: #FF9900; padding: 10px 15px;">Total Recovered<br><br>{{w_total['recovered']}}</h1></div>
-                </div>
-
+                <div id="piechart2" class="pie"></div>
+                <center>
+                    <div class="updates"
+                        style="display: flex; justify-content: center; padding-bottom: 50px; margin-top: -20px;">
+                        <div style="border: 1px solid white">
+                            <h1 style="color: #3366CC; padding: 10px 15px;">Total Confirmed<br><br>{{w_total['cases']}}
+                            </h1>
+                        </div>
+                        <div style="border: 1px solid white">
+                            <h1 style="color: #DC3912; padding: 10px 15px;">Total Deaths<br><br>{{w_total['deaths']}}
+                            </h1>
+                        </div>
+                        <div style="border: 1px solid white">
+                            <h1 style="color: #FF9900; padding: 10px 15px;">Total
+                                Recovered<br><br>{{w_total['recovered']}}</h1>
+                        </div>
+                    </div>
+                </center>
                 <table>
                     <tr>
                         <th>Country</th>
@@ -151,16 +195,27 @@ and open the template in the editor.
                 </table>
             </div>
             <div>
-                <h2 align="center">India Updates</h2>
-                <div align="center" id="piechart" style="padding-left: 10rem;">
+                <h1 align="center" id="text_shadow">India Updates</h1>
+                <div id="piechart" class="pie">
                 </div>
+                <center>
+                    <div class="updates"
+                        style="display: flex; justify-content: center; padding-bottom: 50px; margin-top: -20px;">
 
-                <div class="updates" style="display: flex; padding-bottom: 50px; margin-top: -20px;">
-
-                    <div style="border: 1px solid white"><h1 style="color: #3366CC; padding: 10px 15px;">Total Confirmed<br><br>{{i_total['cases']}}</h1></div>
-                    <div style="border: 1px solid white"><h1 style="color: #DC3912; padding: 10px 15px;">Total Deaths<br><br>{{i_total['deaths']}}</h1></div>
-                    <div style="border: 1px solid white"><h1 style="color: #FF9900; padding: 10px 15px;">Total Recovered<br><br>{{i_total['recovered']}}</h1></div>
-                </div>
+                        <div style="border: 1px solid white">
+                            <h1 style="color: #3366CC; padding: 10px 15px;">Total Confirmed<br><br>{{i_total['cases']}}
+                            </h1>
+                        </div>
+                        <div style="border: 1px solid white">
+                            <h1 style="color: #DC3912; padding: 10px 15px;">Total Deaths<br><br>{{i_total['deaths']}}
+                            </h1>
+                        </div>
+                        <div style="border: 1px solid white">
+                            <h1 style="color: #FF9900; padding: 10px 15px;">Total
+                                Recovered<br><br>{{i_total['recovered']}}</h1>
+                        </div>
+                    </div>
+                </center>
                 <table>
                     <tr>
                         <th>State</th>

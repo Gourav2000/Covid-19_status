@@ -5,8 +5,8 @@ def get_news():
     dt_today=str(datetime.today().strftime('%m/%d/%Y'))
     dt_previous=datetime.today()-timedelta(days=5)
     dt_previous=str(dt_previous.strftime('%m/%d/%Y'))
-    print(dt_today)
-    print(dt_previous)
+    #print(dt_today)
+    #print(dt_previous)
 
     googlenews=GoogleNews(start=dt_previous,end=dt_today)
     googlenews.search('Coronavirus')
@@ -15,14 +15,6 @@ def get_news():
     googlenews.getpage(2)
     result2=googlenews.result()
     result=result1+result2
-
-
-
-    for i in result:
-        for j in i:
-            print(j)
-        break
-
     news_list=list()
     for i in result:
         if i['desc']!='':

@@ -1,12 +1,12 @@
 
 @import "compass/css3";
 @import url(https://fonts.googleapis.com/css?family=Khula:700);
+
+
 body {
     background: black;
     color: #eee;
     font: 1em 'PT Sans', sans-serif;
-    
-
 }
 
 .hidden {
@@ -28,6 +28,7 @@ body {
     top:-0.14em;
     left:10px;
 }
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -143,23 +144,7 @@ body {
     z-index: 1;
 }
 
-@media screen and (max-width: 700px) {
-    .tabbed { width: 400px }
-    .tabbed > label { display: none }
-    .tabs > div {
-        width: 100%;
-        border: none;
-        padding: 0;
-        opacity: 1;
-        position: relative;
-        transform: none;
-        margin-bottom: 60px;
-    }
-    .tabs > div h2 {
-        border-bottom: 2px solid #009688;
-        padding-bottom: .5em;
-    }
-}
+
 #retro h1 {
     color: #d7ceb2;
     text-shadow: 3px 3px 0px #2c2e38, 5px 5px 0px #5c5f72;
@@ -185,3 +170,4 @@ th, td {
     text-align: left;
     border-bottom: 1px solid #ddd;
 }
+
