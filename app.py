@@ -1,6 +1,7 @@
 
 import requests
 import itertools
+import os
 import flask
 from flask import Flask, render_template
 from flask import request, jsonify
@@ -41,10 +42,20 @@ def getDetails():
 th_details=Thread(target=getDetails)
 th_details.start()
 
+dataw=dict()
+datai=dict()
+datawd=dict()
+dataid=dict()
+def getAnalysis():
+    dataw.update(analysis.get_world_daily_data())
+    datai.update(analysis.get_india_daily_update())
+    datawd.update(analysis.get_world_derrivative())
+    dataid.update(analysis.get_india_derrivative())
+th_analysis= Thread(target=getAnalysis)
+th_analysis.start()
 
 
-
-app = flask.Flask(__name__, template_folder="public_html", static_folder="public_html/static")
+app = flask.Flask(__name__, template_folder="public_html")
 app.config["DEBUG"] = True
 
 
@@ -69,10 +80,11 @@ def guidelines_sec():
 
 @app.route('/about', methods=['GET'])
 def about_sec():
-    return render_template("About_covid.html")
+    return render_template("About_Covid.html")
 
 @app.route('/analysis', methods=['GET'])
-def analysis_sec(dataw=analysis.get_world_daily_data(),datai=analysis.get_india_daily_update(),datawd=analysis.get_world_derrivative(),dataid=analysis.get_india_derrivative()):
+def analysis_sec():
+    th_analysis.join()
     return render_template("Analysis.html",dataw=dataw,datai=datai,datawd=datawd,dataid=dataid,zip=zip)
 
 @app.route('/api/world', methods=['GET'])
@@ -91,4 +103,5 @@ def api_news():
     return jsonify(news_dic['news_list'])
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    #app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0',port=int(os.environ.get('PORT', 8080)))
