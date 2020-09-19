@@ -167,11 +167,16 @@
             chart.draw(data, google.charts.Line.convertOptions(options));
         }
     </script>
-    <link rel="stylesheet" href="static/css_Covid.css">
+    <link rel="stylesheet" href="css_Covid.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.0.1/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
-
+    <style>
+        .content{
+            width: 55rem;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -208,33 +213,46 @@
             <div align="center">
                 <br><br>
                 <div id="world_chart"></div>
-                <div>
-                    <p>This is the world chart. Write your code here.</p>
+                <div class="content">
+                    <p>As we can see this chart shows the daily increase in covid cases and the ones recovery for the world
+                    We can call it progress if the recovery line closes in with the cases line,but as of now we can observe 
+                    that instead of converging they are diverging away from each other which makes the situation that more alarming.
+                    </p>
                 </div>
                 <br><br><br>
                 <div id="World_derrivative_chart"></div>
-                <div>
-                    <p>This is world derrivative chart. Write your code here.</p>
+                <div class="content">
+                    <p>
+                    This chart shows the number of cases emerging per day.Even though the line keeps going up and down,
+                    if we look carefully we will see that on a average the the frequency is strictly increasing but 
+                    the good news is the recovery line is catching up and if this trend goes on then soon the recovery
+                    line and the cases line will start converging again.
+                    </p>
                 </div>
                 <br>
             </div>
             <div align="center">
                 <br><br>
                 <div id="India_chart"></div>
-                <div>
-                    <p>This is the India chart. Write your code here.</p>
+                <div class="content">
+                    <p>This chart shows the rise in total number of cases, recovered and death due to covid in India only,
+                        For now compared to the world India's situation is even worse, as the cases line is even steeper for india
+                        compared to thw world average.Even though thte recovery line is also steeper, it still falls far behind cases line appears 
+                        to be diverging away from the cases. As of now we can conclude has India has it worse then the world average.  </p>
                 </div>
                 <br><br><br>
                 <div id="India_derrivative_chart"></div>
-                <div>
-                    <p>This is India derrivative chart. Write your code here.</p>
+                <div class="content">
+                    <p>This chart shows number of covid cases per day in India only.here we can observe that the recovery line has caught
+                        up with cases several times as of now and diverged again,looking closely we can see that even though they appears far recovery 
+                        line is on the way of converging with cases line which can be said as posetive news considering recent situation.   </p>
                 </div>
                 <br>
             </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
-    <script src="static/javascript_Covid.js"></script>
+    <script src="javascript_Covid.js"></script>
 </body>
 
 </html>

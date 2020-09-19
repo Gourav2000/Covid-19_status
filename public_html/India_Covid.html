@@ -79,7 +79,7 @@ and open the template in the editor.
     <title>Covid Tracker</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/css_Covid.css">
+    <link rel="stylesheet" href="css_Covid.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/2.0.1/normalize.css">
     <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
@@ -90,16 +90,13 @@ and open the template in the editor.
             font-family: 'Aclonica';
             font-size: 16px;
         }
-        #mySidenav{
+
+        #mySidenav {
             font-family: initial;
             font-size: initial;
         }
-        #text_shadow {
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            text-shadow: 4px 3px 0px rgb(0, 0, 0), 9px 8px 0px rgba(253, 252, 252, 0.671);
-        }
 
-        .pie{
+        .pie {
             width: 30rem;
             margin: 0 auto;
         }
@@ -110,9 +107,37 @@ and open the template in the editor.
             }
 
             .tabbed {
+                width: 55rem;
                 margin-top: 30px;
+                padding-left: 100px;
             }
-            
+
+            .tabbed>label {
+                display: block;
+                width: 100%;
+            }
+
+            .tabs>div {
+
+                width: 800px;
+                border: none;
+                padding: 0;
+                opacity: 0;
+                margin-bottom: 60px;
+                transform: none;
+            }
+
+            .tabs>div h2 {
+                border-bottom: 2px solid #4EC6DE;
+                padding-bottom: .5em;
+            }
+
+            #tab-nav-1:checked~.tabs>div:nth-of-type(1),
+            #tab-nav-2:checked~.tabs>div:nth-of-type(2) {
+                transform: rotateX(0);
+                opacity: 1;
+                z-index: 1;
+            }
         }
     </style>
 </head>
@@ -195,7 +220,7 @@ and open the template in the editor.
                 </table>
             </div>
             <div>
-                <h1 align="center" id="text_shadow">India Updates</h1>
+                <h1 align="center">India Updates</h1>
                 <div id="piechart" class="pie">
                 </div>
                 <center>
@@ -246,7 +271,7 @@ and open the template in the editor.
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.6/prefixfree.min.js"></script>
-    <script src="static/javascript_Covid.js"></script>
+    <script src="javascript_Covid.js"></script>
 </body>
 
 </html>
