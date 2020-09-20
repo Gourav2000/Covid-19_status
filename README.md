@@ -49,15 +49,9 @@ Components of the project are organized as follows:
 - `/api` - Here all our data is listed  and u can access with the listed api calls shown there. 
 
 ## Screenshots
-<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/1.png" width="683" height="256">
-<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/2.png" width="683" height="256">
-![myimage-alt-tag](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/3.png)
-![myimage-alt-tag](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/4.png)
-![myimage-alt-tag](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/5.png)
-![myimage-alt-tag](https://g7thub.com/Gourav2000/Covid-19_status/blob/master/screenshots/6.png)
-![myimage-alt-tag](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/7.png)
-![myimage-alt-tag](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/8.png)
-![myimage-alt-tag](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/9.png)
+![test image size](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/3.png){:height="50%" width="50%"}
+![test image size](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/4.png){:height="50%" width="50%"}
+
 
 ## How to contribute
 
