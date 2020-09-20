@@ -55,14 +55,14 @@ Components of the project are organized as follows:
 <img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/3.png" width=30% height=30%>
 </p>
 <p float="left">
-<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/4.png" width=30% height=33%>
-<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/5.png" width=30% height=33%>
-<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/6.png" width=30% height=33%>
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/4.png" width=30% height=30%>
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/5.png" width=30% height=30%>
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/6.png" width=30% height=30%>
 </p>
 <p float="left">
-<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/7.png" width=33% height=33%>
-<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/8.png" width=33% height=33%>
-<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/9.png" width=33% height=33%>
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/7.png" width=30% height=30%>
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/8.png" width=30% height=30%>
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/9.png" width=30% height=30%>
 </p>
 <h2><b>How to contribute</b></h2>
 
