@@ -67,4 +67,4 @@ Components of the project are organized as follows:
 <h2><b>How to contribute</b></h2>
 
 No matter how you choose to help, we would love to have you as part of the project. 
-You can just fork the repository add your ideas and send us a pull request and we will look through it.. ;-)
+You can just fork the repository ,add your ideas and send us a pull request,we will look through it.. ;-)
