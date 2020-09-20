@@ -9,7 +9,7 @@ This repository is for the project's **website**: https://covid-tracker-status.w
 
 The website is built on popular Python webbased framework [Flask](https://palletsprojects.com/p/flask/). If you are not familiar with Flask, we suggest checking out their [excellent documentation](https://flask.palletsprojects.com/en/1.1.x/).
 
-### Install
+### Install and Run
 
 First, you'll need the Python 3.7 or a higher version to run this project:
 
@@ -33,11 +33,6 @@ python app.py
 The site is now running at `http://127.0.0.1:5000`. Any changes you make to code is live-updated as soon as you save the changes in app.py. 
 
 
-To run the website locally, use:
-
-```shell
-gatsby develop
-```
 
 The site is now running at `http://localhost:8000`. Any changes you make to code is live-updated.
 
@@ -56,6 +51,7 @@ Components of the project are organized as follows:
 - `/api` - Here all our data is listed  and u can access with the listed api calls shown there. 
 
 ## Screenshots
+![myimage-alt-tag](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/1.png)
 
 ## How to contribute
 
