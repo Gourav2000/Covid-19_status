@@ -49,9 +49,8 @@ Components of the project are organized as follows:
 - `/api` - Here all our data is listed  and u can access with the listed api calls shown there. 
 
 ## Screenshots
-![test image size](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/3.png){:height="50%" width="50%"}
-![test image size](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/4.png){:height="50%" width="50%"}
-
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/1.png" width=50% height=50%>
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/2.png" width=50% height=50%>
 
 ## How to contribute
 
