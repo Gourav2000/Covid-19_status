@@ -50,11 +50,21 @@ Components of the project are organized as follows:
 
 ## Screenshots
 <p float="left">
-<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/1.png" width=30% height=30%>
-<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/2.png" width=30% height=30%>
-<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/3.png" width=30% height=30%>
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/1.png" width=33% height=33%>
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/2.png" width=33% height=33%>
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/3.png" width=33% height=33%>
 </p>
-## How to contribute
+<p float="left">
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/4.png" width=33% height=33%>
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/5.png" width=33% height=33%>
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/6.png" width=33% height=33%>
+</p>
+<p float="left">
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/7.png" width=33% height=33%>
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/8.png" width=33% height=33%>
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/9.png" width=33% height=33%>
+</p>
+<h2><b>How to contribute</b></h2>
 
 No matter how you choose to help, we would love to have you as part of the project. 
 You can just fork the repository add your ideas and send us a pull request and we will look through it.. ;-)
