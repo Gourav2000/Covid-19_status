@@ -34,8 +34,6 @@ The site is now running at `http://127.0.0.1:5000`. Any changes you make to code
 
 
 
-The site is now running at `http://localhost:8000`. Any changes you make to code is live-updated.
-
 Alternatively you can also deploy it in heroku or firebase hosting(with google cloud run). the respective requirements.txt and dockerfile required are already provided.
 For help on heroku go to the official documentations page-https://devcenter.heroku.com/articles/getting-started-with-python
 For firebase hosting u can look at this for reference- https://medium.com/firebase-developers/hosting-flask-servers-on-firebase-from-scratch-c97cfb204579
@@ -52,6 +50,14 @@ Components of the project are organized as follows:
 
 ## Screenshots
 ![myimage-alt-tag](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/1.png)
+![myimage-alt-tag](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/2.png)
+![myimage-alt-tag](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/3.png)
+![myimage-alt-tag](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/4.png)
+![myimage-alt-tag](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/5.png)
+![myimage-alt-tag](https://g7thub.com/Gourav2000/Covid-19_status/blob/master/screenshots/6.png)
+![myimage-alt-tag](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/7.png)
+![myimage-alt-tag](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/8.png)
+![myimage-alt-tag](https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/9.png)
 
 ## How to contribute
 
