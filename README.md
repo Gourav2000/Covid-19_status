@@ -11,7 +11,7 @@ The website is built on popular Python webbased framework [Flask](https://pallet
 
 ### Install and Run
 
-First, you'll need the Python 3.7 or a higher version to run this project:
+First, you'll need Python 3.7 or a higher version to run this project:
 
 You can check your python version with:
 
