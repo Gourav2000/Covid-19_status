@@ -50,8 +50,9 @@ Components of the project are organized as follows:
 
 ## Screenshots
 <p float="left">
-<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/1.png" width=40% height=50%>
-<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/2.png" width=40% height=50%>
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/1.png" width=30% height=30%>
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/2.png" width=30% height=30%>
+<img src="https://github.com/Gourav2000/Covid-19_status/blob/master/screenshots/3.png" width=30% height=30%>
 </p>
 ## How to contribute
 
