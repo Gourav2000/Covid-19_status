@@ -3,7 +3,7 @@
 
 The COVID-19-status Project collects information from all the countries of the world and all the states of india, to provide the most comprehensive testing data we can collect for the novel coronavirus, SARS-CoV-2.
 
-This repository is for the project's **website**: https://covid-tracker-status.web.app/.
+This repository is for the project's **website**: https://covid-status-tracker.herokuapp.com/.
 
 ## Development
 
